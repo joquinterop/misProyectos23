@@ -9,7 +9,7 @@ urlpatterns = [
     path('listadoSQL', views.listadoSQL,name='listadoSQL'),
     path('listado_generos',views.lista_generos,name='lista_generos'),
     path('crud',views.crud,name='crud'),
-    path('alumnosAdd',views.alumno_agregar,name='alumnoAdd'),
+    path('alumnosAdd',views.alumnosAdd,name='alumnoAdd'),
 ]
 
 #La funcion PATH en su estructura separa los parametros por comas ()
