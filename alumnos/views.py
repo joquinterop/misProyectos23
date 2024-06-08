@@ -24,4 +24,10 @@ def crud(request):
     context = {"alumnos":alumnos}
     return render(request,'alumnos/alumnos_list.html',context)
 
+def alumnosAdd(request):
+    if request.method is not "POST":
+        #no es un POST, por lo tanto se muestra el formulario para agregar.
+        generos=Genero.objects.all()
+        context={'generos':generos}
+        return render (request, 'alumnos/alumnos_add.html', context)
 

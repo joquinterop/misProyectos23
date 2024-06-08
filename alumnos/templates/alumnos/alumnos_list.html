@@ -23,7 +23,7 @@
             {{mensaje}}
         {% endif %}
     </div>
-<!--
+
     <table>
         {% if alumnos %}
             <th>Rut</th>
@@ -33,8 +33,20 @@
             <th>Modificar</th>
             {% for x in alumnos %}
                 <tr>
-                    <td></td>
+                    <td> {{ x.rut }}  </td>
+                    <td> {{ x.nombre }}  </td>
+                    <td> {{ x.apellido_paterno }}  </td>
+                    <td> <a href="{% url 'alumnos_del pk=x.rut % '}">Eliminar</a>  </td>
+                    <td> <a href="{% url 'alumnos_finEdit pk=x.rut % '}">Modificar</a> </td>
+                </tr>
+            {% endfor %}
+        {% endif %}
     </table>
-     -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery.3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#idMensajes").delay(2000).fadeOut("slow");
+    });
+</script>
 </body>
 </html>
