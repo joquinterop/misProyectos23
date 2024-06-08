@@ -20,9 +20,9 @@
             <pre>Apellido M.:             <input type="text" name="materno"      ></pre>
             <pre>Fecha Nac.:              <input type="date" name="fechaNac"     ></pre>
             <pre>Género:              <select name="genero">
-                { for genero in generos %}
+                {% for genero in generos %}
                     <option value="{{genero.id_genero}}" > {{genero.genero}}</option>
-                {% end for %}
+                {% endfor %}
                 </select>
             </pre>
             <pre>Celular:                 <input type="text" name="telefono"     ></pre>
@@ -41,6 +41,8 @@
             {% endif %}
         </div>
     </div>
+    <h1>Hola</h1>
+    
     
 </body>
 </html>
